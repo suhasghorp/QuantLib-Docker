@@ -21,3 +21,5 @@ RUN wget https://dl.bintray.com/quantlib/releases/QuantLib-${quantlib_version}.t
     && ./configure --prefix=/usr --disable-static --enable-thread-safe-observer-pattern CXXFLAGS=-O3 \
     && make -j 4 && make check && make install \
     && cd .. && rm -rf QuantLib-${quantlib_version} && ldconfig
+
+CMD bash
